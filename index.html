@@ -1,0 +1,55 @@
+<title>Onishiki - BlackHat exploiting server</title>
+<style>
+@font-face {
+  font-family: "Gore";
+  src: url("./Gore\ Regular.otf") format("oft");
+}
+
+.example{
+  padding: 20px 0;
+  width: 75%;
+  margin: 0 auto;
+  font-family: monospace;
+}
+
+h1 {
+    font-size: 90px;
+    font-family: 'Gore';
+}
+
+pre, code, p, h1{
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+p{
+  line-height: 22px;
+}
+
+pre, code {
+    background-color: whitesmoke;
+    padding-left: 10px;
+}
+</style>
+<div class="example" id="js-example">
+    <h1>Onishiki -</h1>
+    <p>Onishiki is a vulnerable webserver for practicising blackhat exploits, auth-bypasses, http traffic capturing and XSS exploiting. As its core and its defense is written in pure C, Onishiki is a zero-dependency server which is evevn pretty portable (< 3.5kb)</p>
+    <p>The server listens for client connections on port 9999 (by default) and allows the user to run a number of different commands that are vulnerable to various types of exploits. </p>
+    <p>Though it does make an attempt to mimic a (simple) legitimate server program this software has no functional use beyond that of acting as an exploit target, and this software should not generally be run by anyone who is not using it as a learning tool.</p>
+    <p>Binaries have been provided on <a href="https://github.com/timo-cmd2/Onishiki">GitHub</a>, however if you wish to compile the software from the provided source files instructions are explained below: If you are on unix, fire up a terminal of your choice and paste the commands. (Requires gnu-gcc). On windows remove line 4 and 5 then execute the created executable and open the localhost port. You might go for a coffee now :D</p>   
+    <pre>
+        <code>
+$ git clone https://github.com/timo-cmd2/Onishiki.git
+$ cd Onishiki # cd to the oni location
+$ gcc sources/*.c -o oni # compile with gcc
+$ chmod +x ./oni # elevate excution permissions
+$ ./oni # open now http://localhost:9999
+
+# You might want to use the binarie as global var in shell. 
+# On Unix just do that: export PATH="$PATH:./path/to/oniBin"</code>
+    </pre>
+    <p>
+    <a href="https://github.com/timo-cmd2/Onishiki">repo on github</a>   
+    <a href="https://github.com/timo-cmd2">with ♥ by Timo 'HaZel' Sarkar</a>
+    </p>
+  </div>
